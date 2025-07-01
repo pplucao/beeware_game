@@ -23,7 +23,7 @@ public class Objetivo extends Ponto {
         reposicionar(largura, altura); 
 
         try {
-            portalGif = new ImageIcon(getClass().getResource("/gif/portal4.gif"));
+            portalGif = new ImageIcon(getClass().getResource("../gif/portal4.gif"));
             // Redimensiona mantendo a animação
             portalGif = new ImageIcon(portalGif.getImage().getScaledInstance(
                 50, 
