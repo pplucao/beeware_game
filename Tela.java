@@ -129,9 +129,10 @@ public class Tela extends JPanel{
             g.fillRect(0, 0, largura, altura);
         }
 
-        g.setColor(Color.WHITE);
+        g.setColor(Color.BLACK);
         g.setFont(new Font("Arial", Font.BOLD, 24));
-        g.drawString("Fase: " + faseAtual.getFase(), 20, 30);
+        g.drawString("FASE: " + faseAtual.getFase(), 20, 30);
+        g.drawString("[ESPAÇO] PARA PAUSAR", 250, 580);
 
         //2. desenha elementos
         faseAtual.getInimigos().forEach(inimigo -> inimigo.desenhar(g));
@@ -144,12 +145,12 @@ public class Tela extends JPanel{
             g.setColor(new Color(255, 255, 255, 200));  // Branco semi-transparente (cor fundo)
             g.fillRect(0, 0, getWidth(), getHeight());  // Fundo
 
-            g.setColor(Color.RED); //cor letra
+            g.setColor(Color.BLACK); //cor letra
             g.setFont(new Font("Arial", Font.BOLD, 30));
             g.drawString("PAUSADO", getWidth()/2 - 100, getHeight()/2 - 20);
 
-            g.setFont(new Font("Arial", Font.PLAIN, 24));
-            g.drawString("[ESPAÇO] PARA DESPAUSAR", getWidth()/2 - 170, getHeight()/2 + 30);
+            g.setFont(new Font("Arial", Font.BOLD, 24));
+            g.drawString("[ESPAÇO] PARA CONTINUAR", getWidth()/2 - 190, getHeight()/2 + 30);
 
         }
          
