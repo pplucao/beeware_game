@@ -26,7 +26,7 @@ public class Jogador extends Ponto{
 
         for(int i =1 ; i<= 5; i++) {
             try { //os nomes estão consistentes e numerados, entao assim já carrega as 5 imagens
-                Image img = new ImageIcon(getClass().getResource("/img/jogadormov" + i + ".png")).getImage();
+                Image img = new ImageIcon(getClass().getResource("../img/jogadormov" + i + ".png")).getImage();
                 spritesAndando.add(img);
             } catch (Exception e) {
                 System.out.println("JOgador não carregado!");
