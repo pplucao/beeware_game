@@ -45,7 +45,7 @@ public class Tela extends JPanel{
 
         //Carrega gif do inicio
         try {
-            gifStart = new ImageIcon(getClass().getResource("/gif/beeMenu.gif"));
+            gifStart = new ImageIcon(getClass().getResource("../gif/beeMenu.gif"));
         } catch (Exception e) {
             System.out.println("Erro ao carregar gif");
             e.printStackTrace();
@@ -53,7 +53,7 @@ public class Tela extends JPanel{
 
         // Carrega a imagem de fundo
         try {
-            imagemFundo = ImageIO.read(getClass().getResource("/img/flores.jpeg"));
+            imagemFundo = ImageIO.read(getClass().getResource("../img/flores.jpeg"));
         } catch (Exception e) {
             System.out.println("Imagem não carregada: " + e.getMessage());
             imagemFundo = null;
@@ -91,7 +91,7 @@ public class Tela extends JPanel{
 
     private void carregarMusica() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
 
-        InputStream audioStream = getClass().getResourceAsStream("/music/musica.wav"); //chama diretório da música
+        InputStream audioStream = getClass().getResourceAsStream("../music/musica.wav"); //chama diretório da música
 
         if(audioStream != null) {
             // Carrega o arquivo de áudio
