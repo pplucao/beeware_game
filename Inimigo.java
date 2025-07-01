@@ -24,7 +24,7 @@ public class Inimigo extends Ponto{ //herda x, y e velocidade
 
 
         try {
-            inimigoGif = new ImageIcon(getClass().getResource("/gif/bee.gif"));
+            inimigoGif = new ImageIcon(getClass().getResource("../gif/bee.gif"));
             // Redimensiona mantendo a animação
             inimigoGif = new ImageIcon(inimigoGif.getImage().getScaledInstance(
                 80, 
