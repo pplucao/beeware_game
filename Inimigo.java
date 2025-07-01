@@ -60,8 +60,8 @@ public class Inimigo extends Ponto{ //herda x, y e velocidade
         y += dy * (velocidade);
 
         // Mantém dentro da tela
-        x = Math.max(0, Math.min(x, larguraTela - 100)); // X entre 0 e larguraTela - 100
-        y = Math.max(0, Math.min(y, alturaTela - 100));
+        x = Math.max(0, Math.min(x, larguraTela - 80)); // X entre 0 e larguraTela - 80
+        y = Math.max(0, Math.min(y, alturaTela - 80));
     }
 
     public Rectangle getBounds() { //colisão
