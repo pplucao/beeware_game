@@ -24,8 +24,8 @@ public class Fase {
         inimigos.clear();
 
         for(int i= 0; i < fase ; i++  ) {
-            int x = random.nextInt(Tela.largura - 50); // Posição aleatória dentro da tela
-            int y = random.nextInt(Tela.altura - 50);
+            int x = random.nextInt(Tela.largura - 100); // Posição aleatória dentro da tela
+            int y = random.nextInt(Tela.altura - 100);
             inimigos.add(new Inimigo(x, y));
         }
     }
