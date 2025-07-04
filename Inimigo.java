@@ -11,7 +11,7 @@ import javax.swing.ImageIcon;
 
 public class Inimigo extends Ponto{ //herda x, y e velocidade
     private Color cor;
-    private int tempoDirecao = 0;
+    private int tempoDirecao = 5;
     private int intervalo_mudanca = 30; //frequencia da mudança de direção
     private int dx = 0;
     private int dy = 0;
@@ -24,11 +24,11 @@ public class Inimigo extends Ponto{ //herda x, y e velocidade
 
 
         try {
-            inimigoGif = new ImageIcon(getClass().getResource("../gif/bee.gif"));
+            inimigoGif = new ImageIcon(getClass().getResource("/gif/bee2.gif"));
             // Redimensiona mantendo a animação
             inimigoGif = new ImageIcon(inimigoGif.getImage().getScaledInstance(
-                80, 
-                80, 
+                60, 
+                60, 
                 Image.SCALE_DEFAULT
             )); 
         } catch (Exception e) {
@@ -37,7 +37,7 @@ public class Inimigo extends Ponto{ //herda x, y e velocidade
         }
 
         // Define uma direção inicial
-        this.dx = rand.nextInt(3) - 1;
+        this.dx = rand.nextInt(3) - 1; //-1, 0 ou 1
         this.dy = rand.nextInt(3) - 1;
     }
     
@@ -60,8 +60,8 @@ public class Inimigo extends Ponto{ //herda x, y e velocidade
         y += dy * (velocidade);
 
         // Mantém dentro da tela
-        x = Math.max(0, Math.min(x, larguraTela - 80)); // X entre 0 e larguraTela - 80
-        y = Math.max(0, Math.min(y, alturaTela - 80));
+        x = Math.max(0, Math.min(x, larguraTela - 60)); // X entre 0 e larguraTela - 60
+        y = Math.max(0, Math.min(y, alturaTela - 60));
     }
 
     public Rectangle getBounds() { //colisão
