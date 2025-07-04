@@ -24,9 +24,9 @@ public class Jogador extends Ponto{
     private void carregarSprites(){
         spritesAndando = new ArrayList<>();
 
-        for(int i =1 ; i<= 5; i++) {
+        for(int i =1 ; i<= 4; i++) {
             try { //os nomes estão consistentes e numerados, entao assim já carrega as 5 imagens
-                Image img = new ImageIcon(getClass().getResource("../img/jogadormov" + i + ".png")).getImage();
+                Image img = new ImageIcon(getClass().getResource("/img/sol" + i + ".png")).getImage();
                 spritesAndando.add(img);
             } catch (Exception e) {
                 System.out.println("JOgador não carregado!");
@@ -45,12 +45,12 @@ public class Jogador extends Ponto{
 
     public void desenhar(Graphics g) {
         if(!spritesAndando.isEmpty()&& spritesAndando.get(frameAtual) != null){
-            g.drawImage(spritesAndando.get(frameAtual), x, y, 40, 40, null);
+            g.drawImage(spritesAndando.get(frameAtual), x, y, 60, 60, null);
         }
     }
 
     public Rectangle getBounds() { //identificar colisao
-    return new Rectangle(x, y, 40, 40);
+    return new Rectangle(x, y, 60, 60);
     }
 
     public float getVelocidade() {
@@ -66,3 +66,4 @@ public class Jogador extends Ponto{
         this.y = y;
     }
 }
+
